@@ -1,10 +1,10 @@
 ---
 	import '../styles/global.css';
-	import {IconCrown} from '@tabler/icons-react';
+	import {IconCrown, IconBrandWhatsapp} from '@tabler/icons-react';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -13,23 +13,24 @@
 		<title>hotelesocampos</title>
 	</head>
 	<body>
-		<header class="px-auto py-4 flex justify-between items-end relative">
+		<header class="py-4 px-auto flex flex-col md:flex-row md:justify-between items-center md:items-end relative">
 			<span id="logo" class="text-2xl font-bold flex flex-col items-center">
 				<IconCrown stroke={2.5}/>
 				<p class="-mt-2">Hoteles<span class="text-primary">Ocampo</span></p>
 			</span>
 			<!-- <p class="absolute top-4 px-auto right-0 text-black/75 text-sm">+52 (833) 000 0000</p> -->
-			<nav>
-				<ul class="flex gap-4 justify-between">
-					<li><button>Tarifas</button></li>
-					<li><button>Ubicaciones</button></li>
-					<li><button>Menú</button></li>
+			<nav> 
+				<ul class="flex gap-8 md:gap-4">
+					<li><a href="#tarifas">Tarifas</a></li>
+					<li><a href="#ubicaciones">Ubicaciones</a></li>
+					<li><a href="#menu">Menú</a></li>
 				</ul>
 			</nav>
 		</header>
 		<slot />
-		<footer class="px-auto">
-			<p class="logo">Copyright &copy; hotelesocampo 2025. Made by <a href="#" class="text-[#806FFF]">pindd.xyz</a></p>
+		<button class="fixed right-2 md:right-8 bottom-2 md:bottom-8 bg-[#25d366] text-white p-4 rounded-full shadow-lg hover:brightness-110 duration-300"><IconBrandWhatsapp size={40}/></button>
+		<footer class="py-8 px-auto bg-linear-to-tr from-primary to-primary-dark text-white">
+			<p class="text-center">Copyright &copy; HotelesOcampo 2025. Made by <a href="#" class="underline">pindd.xyz</a></p>
 		</footer>
 	</body>
 </html>

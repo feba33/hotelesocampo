@@ -1,3 +1,64 @@
-<section>
-  <p>Hola</p>
+---
+import Image from "astro/components/Image.astro";
+import RoomImg from "../assets/pictures/room1.jpeg";
+import LoveRoomImg from "../assets/pictures/room4.jpeg";
+---
+
+<section id="tarifas" class="py-8 px-auto">
+  <h2 class="font-bold tracking-wider text-2xl text-primary">Tarifas</h2>
+
+  <article class="mt-8 grid md:grid-cols-2 gap-8 gap-y-16">
+    <div class="room">
+      <Image class="w-full h-40 object-cover" src={RoomImg} alt="habitación" />
+      <h3 class="text-4xl">Habitación Standard</h3>
+      <p class="text-xl">Cama Individual</p>
+      <p class="text-2xl font-bold tracking-wider">500.00 MXN</p>
+    </div>
+
+    <div class="room">
+      <Image class="w-full h-40 object-cover" src={RoomImg} alt="habitación" />
+      <h3 class="text-4xl">Habitación Premium</h3>
+      <p class="text-xl">Cama Kingsize</p>
+      <p class="text-2xl font-bold tracking-wider">750.00 MXN</p>
+    </div>
+
+    <div class="room">
+      <Image class="w-full h-40 object-cover" src={RoomImg} alt="habitación" />
+      <h3 class="text-4xl">Habitación Doble</h3>
+      <p class="text-xl">Dos camas</p>
+      <p class="text-2xl font-bold tracking-wider">900.00 MXN</p>
+    </div>
+
+    <div class="room">
+      <Image
+        class="w-full h-40 object-cover"
+        src={LoveRoomImg}
+        alt="habitación"
+      />
+      <h3 class="text-4xl">Habitación Express</h3>
+      <p class="text-xl">Cama Individual + Love Chair</p>
+      <p class="text-2xl font-bold tracking-wider">250.00 MXN</p>
+    </div>
+  </article>
 </section>
+
+<style>
+  @reference '@styles/global.css';
+
+  .room {
+    @apply flex flex-col gap-4;
+  }
+
+  .room > img {
+    @apply rounded-t-md;
+  }
+  .room > p:last-child::after {
+    content: " / dia";
+    @apply text-lg;
+  }
+
+  .room:last-child > p:last-child::after {
+    content: " x 3 horas";
+    @apply text-lg;
+  }
+</style>

@@ -15,7 +15,7 @@ import espanolImg from "../assets/pictures/espanol1.jpg";
     >
       <div>
         <p
-          class="text-white text-6xl font-medium tracking-wide leading-relaxed max-w-[700px]"
+          class="text-white text-4xl md:text-6xl font-medium tracking-wide leading-relaxed max-w-[700px]"
         >
           El lugar perfecto para <span class="highlight">descansar</span>
           y <span class="highlight">disfrutar</span>
@@ -29,9 +29,9 @@ import espanolImg from "../assets/pictures/espanol1.jpg";
         </p>
       </div>
 
-      <div class="flex gap-4">
+      <div class="flex gap-2">
         <button class="btn-primary text-xl">Reservar ahora</button>Í
-        <button class="btn-secondary text-xl">Ver más</button>
+        <a href="#tarifas" class="btn-secondary text-xl">Ver más</a>
       </div>
     </div>
   </article>
@@ -48,9 +48,8 @@ import espanolImg from "../assets/pictures/espanol1.jpg";
 
   .text-rotator {
     position: relative;
-    height: 3.75rem;
     overflow: hidden;
-    @apply text-white text-6xl font-medium tracking-wide mt-[1.625rem]; /* 1.625rem is leading space */
+    @apply text-white h-[2.25rem] text-4xl md:h-[3.75rem] md:text-6xl font-medium tracking-wide mt-[1rem] md:mt-[1.625rem]; /* 1.625rem is leading space */
   }
 
   .text-rotator span {
