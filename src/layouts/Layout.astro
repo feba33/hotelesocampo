@@ -1,16 +1,34 @@
 ---
 	import '../styles/global.css';
 	import {IconCrown, IconBrandWhatsapp} from '@tabler/icons-react';
+	import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 	<head>
+		<SEO
+		title="Hoteles Ocampo"
+		description="Fábrica de software a la medida"
+		openGraph={{
+			basic: {
+				title: "pindd.xyz",
+				type: "website",
+				image: "https://i.ibb.co/PZ2hXkN9/logo.png",
+			},
+		}}
+		twitter={{
+			card: "summary_large_image",
+			site: "https://pindd.xyz/",
+			title: "pindd.xyz",
+			image: "https://i.ibb.co/PZ2hXkN9/logo.png",
+		}}
+	/>
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>hotelesocampos</title>
 	</head>
 	<body>
 		<header class="py-4 px-auto flex flex-col md:flex-row md:justify-between items-center md:items-end relative">
