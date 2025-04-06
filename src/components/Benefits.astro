@@ -1,0 +1,43 @@
+---
+import { IconBeach, IconWifi, IconReceipt2 } from "@tabler/icons-react";
+---
+
+<section class="py-8 px-auto bg-linear-to-tr bg-slate-100">
+  <article class="grid grid-cols-3 gap-16">
+    <div class="benefit">
+      <h2>Ubicación privilegiada</h2>
+      <IconBeach size={60} stroke={1} />
+      <p>Estamos cercas de los principales atractivos turisticos</p>
+    </div>
+    <div class="benefit">
+      <h2>Internet y Clima</h2>
+      <IconWifi size={60} stroke={1} />
+      <p>Las habitaciones estan acondicionadas para una agradable estancia</p>
+    </div>
+    <div class="benefit">
+      <h2>A los mejores precios</h2>
+      <IconReceipt2 size={60} stroke={1} />
+      <p>Habitaciones y servicio para cualquier presupuesto</p>
+    </div>
+  </article>
+</section>
+
+<style>
+  @reference "@styles/global.css";
+
+  .benefit {
+    @apply flex flex-col gap-2 items-center  text-center;
+  }
+  /* 
+  .benefit > svg{
+   @apply text-primary;
+  } */
+
+  .benefit > p {
+    @apply w-full;
+  }
+
+  .benefit > h2 {
+    @apply text-primary text-xl font-bold tracking-wide;
+  }
+</style>

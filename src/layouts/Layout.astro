@@ -1,3 +1,8 @@
+---
+	import '../styles/global.css';
+	import {IconCrown} from '@tabler/icons-react';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,10 +10,27 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>hotelesocampos</title>
 	</head>
 	<body>
+		<header class="px-auto py-4 flex justify-between items-end relative">
+			<span id="logo" class="text-2xl font-bold flex flex-col items-center">
+				<IconCrown stroke={2.5}/>
+				<p class="-mt-2">Hoteles<span class="text-primary">Ocampo</span></p>
+			</span>
+			<!-- <p class="absolute top-4 px-auto right-0 text-black/75 text-sm">+52 (833) 000 0000</p> -->
+			<nav>
+				<ul class="flex gap-4 justify-between">
+					<li><button>Tarifas</button></li>
+					<li><button>Ubicaciones</button></li>
+					<li><button>Menú</button></li>
+				</ul>
+			</nav>
+		</header>
 		<slot />
+		<footer class="px-auto">
+			<p class="logo">Copyright &copy; hotelesocampo 2025. Made by <a href="#" class="text-[#806FFF]">pindd.xyz</a></p>
+		</footer>
 	</body>
 </html>
 
