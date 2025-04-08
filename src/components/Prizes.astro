@@ -1,6 +1,8 @@
 ---
 import Image from "astro/components/Image.astro";
-import RoomImg from "../assets/pictures/room1.jpeg";
+import DoubleRoomImg from "../assets/pictures/room1.jpeg";
+import StandardRoomImg from "../assets/pictures/room3.jpg";
+import PremiumRoomImg from "../assets/pictures/room2.jpg";
 import LoveRoomImg from "../assets/pictures/room4.jpeg";
 import { IconBath, IconWifi, IconBed, IconWash } from "@tabler/icons-react";
 ---
@@ -10,7 +12,7 @@ import { IconBath, IconWifi, IconBed, IconWash } from "@tabler/icons-react";
 
   <article class="mt-8 grid md:grid-cols-2 gap-8 gap-y-16">
     <div class="room">
-      <Image class="w-full h-40 object-cover" src={RoomImg} alt="habitación" />
+      <Image class="w-full h-40 object-cover" src={StandardRoomImg} alt="habitación" />
       <div>
         <h3 class="text-3xl">Habitación Standard</h3>
         <ul class="flex flex-col gap-2">
@@ -24,7 +26,7 @@ import { IconBath, IconWifi, IconBed, IconWash } from "@tabler/icons-react";
     </div>
 
     <div class="room">
-      <Image class="w-full h-40 object-cover" src={RoomImg} alt="habitación" />
+      <Image class="w-full h-40 object-cover" src={PremiumRoomImg} alt="habitación" />
       <div>
         <h3 class="text-3xl">Habitación Premium</h3>
         <ul class="flex flex-col gap-2">
@@ -38,7 +40,7 @@ import { IconBath, IconWifi, IconBed, IconWash } from "@tabler/icons-react";
     </div>
 
     <div class="room">
-      <Image class="w-full h-40 object-cover" src={RoomImg} alt="habitación" />
+      <Image class="w-full h-40 object-cover" src={DoubleRoomImg} alt="habitación" />
       <div>
         <h3 class="text-3xl">Habitación Doble</h3>
         <ul class="flex flex-col gap-2">
