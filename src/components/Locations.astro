@@ -1,8 +1,85 @@
+---
+import { IconCar, IconLocation } from "@tabler/icons-react";
+---
+
 <section id="ubicaciones" class="py-8 px-auto bg-linear-to-tr bg-slate-100">
   <h2 class="font-bold tracking-wider text-2xl text-primary">Ubicaciones</h2>
-  <p class="text-xl">Tenemos multiples ubicaciónes por toda la zona metropolitana de Tampico</p>
+  <p class="text-xl">
+    Tenemos multiples ubicaciónes por toda la zona metropolitana de Tampico
+  </p>
 
-  <article class="mt-8">
-    <iframe  class="w-full" src="https://www.google.com/maps/d/embed?mid=1eqQpjgiZnmGtrliKX1WBokfywyBCvd4&ehbc=2E312F" height="480"></iframe>
+  <article class="my-8">
+    <iframe
+      class="w-full"
+      src="https://www.google.com/maps/d/embed?mid=1eqQpjgiZnmGtrliKX1WBokfywyBCvd4&ehbc=2E312F"
+      height="480"></iframe>
   </article>
+
+  <div class="grid md:grid-cols-2 gap-8 gap-y-16">
+    <div class="location">
+      <span
+        ><h3>Hotel El Español</h3>
+        <a href="#"><IconLocation size={14}/>Ir a dirección</a>
+      </span>
+      <div class="">
+        <p>Calle Sherman #192. Colonia Voluntad Fuerza y Trabajo</p>
+        <p><IconCar/> A 10 minutos de Wa Wa Wa</p>
+      </div>
+    </div>
+    <div class="location">
+      <span
+        ><h3>Hotel El Español</h3>
+        <a href="#"><IconLocation size={14}/>Ir a dirección</a>
+      </span>
+      <div class="">
+        <p>Calle Sherman #192. Colonia Voluntad Fuerza y Trabajo</p>
+        <p><IconCar/> A 10 minutos de Wa Wa Wa</p>
+      </div>
+    </div>
+    <div class="location">
+      <span
+        ><h3>Hotel El Español</h3>
+        <a href="#"><IconLocation size={14}/>Ir a dirección</a>
+      </span>
+      <div class="">
+        <p>Calle Sherman #192. Colonia Voluntad Fuerza y Trabajo</p>
+        <p><IconCar/> A 10 minutos de Wa Wa Wa</p>
+      </div>
+    </div>
+    <div class="location">
+      <span
+        ><h3>Hotel El Español</h3>
+        <a href="#"><IconLocation size={14}/>Ir a dirección</a>
+      </span>
+      <span>
+        <div class="">
+          <p>Calle Sherman #192. Colonia Voluntad Fuerza y Trabajo</p>
+          <p><IconCar/> A 10 minutos de Wa Wa Wa</p>
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <style>
+    @reference '@styles/global.css';
+
+    .location{
+      @apply flex flex-col gap-4;
+    }
+
+    .location h3 {
+      @apply font-bold text-xl;
+    }
+
+    .location a {
+      @apply bg-primary text-white rounded-md font-bold px-2 flex gap-1 text-sm items-center;
+    }
+
+    .location > span {
+      @apply flex justify-between;
+    }
+    .location p:last-child {
+      @apply flex gap-1 items-center text-black/50 font-medium text-sm;
+    }
+  </style>
 </section>

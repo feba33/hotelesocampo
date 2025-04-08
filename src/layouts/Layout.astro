@@ -1,63 +1,147 @@
 ---
-	import '../styles/global.css';
-	import {IconCrown, IconBrandWhatsapp} from '@tabler/icons-react';
-	import { SEO } from "astro-seo";
+import "../styles/global.css";
+import {
+  IconCrown,
+  IconBrandWhatsapp,
+  IconBrandFacebook,
+} from "@tabler/icons-react";
+import { SEO } from "astro-seo";
+import pindd from "../assets/pindd-black-bg.svg";
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-	<head>
-		<SEO
-		title="Hoteles Ocampo"
-		description="El lugar perfecto para descansar y disfrutar"
-		openGraph={{
-			basic: {
-				title: "Hoteles Ocampo",
-				type: "website",
-				image: "https://i.ibb.co/21zDdbyp/banner-hotelesocampo.png",
-			},
-		}}
-		twitter={{
-			card: "summary_large_image",
-			site: "https://hotelesocampo.pindd.xyz/",
-			title: "Hoteles Ocampo",
-			image: "https://i.ibb.co/21zDdbyp/banner-hotelesocampo.png",
-		}}
-	/>
+  <head>
+    <SEO
+      title="Hoteles Ocampo"
+      description="El lugar perfecto para descansar y disfrutar"
+      openGraph={{
+        basic: {
+          title: "Hoteles Ocampo",
+          type: "website",
+          image: "https://i.ibb.co/21zDdbyp/banner-hotelesocampo.png",
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        site: "https://hotelesocampo.pindd.xyz/",
+        title: "Hoteles Ocampo",
+        image: "https://i.ibb.co/21zDdbyp/banner-hotelesocampo.png",
+      }}
+    />
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-	</head>
-	<body>
-		<header class="py-4 px-auto flex flex-col md:flex-row md:justify-between items-center md:items-end relative">
-			<span id="logo" class="text-2xl font-bold flex flex-col items-center">
-				<IconCrown stroke={2.5}/>
-				<p class="-mt-2">Hoteles<span class="text-primary">Ocampo</span></p>
-			</span>
-			<!-- <p class="absolute top-4 px-auto right-0 text-black/75 text-sm">+52 (833) 000 0000</p> -->
-			<nav> 
-				<ul class="flex gap-8 md:gap-4">
-					<li><a href="#precios">Precios</a></li>
-					<li><a href="#ubicaciones">Ubicaciones</a></li>
-					<li><a href="#menu">Menú</a></li>
-				</ul>
-			</nav>
-		</header>
-		<slot />
-		<a href="http://wa.me/5215625165078" target="_blank" rel="noopener noreferrer" class="fixed right-2 md:right-8 bottom-2 md:bottom-8 bg-[#25d366] text-white p-4 rounded-full shadow-lg hover:brightness-110 duration-300"><IconBrandWhatsapp size={40}/></a>
-		<footer class="py-8 px-auto bg-linear-to-tr from-primary to-primary-dark text-white">
-			<p class="text-center">Copyright &copy; HotelesOcampo 2025. Made by <a class="underline font-bold" href="https://pindd.xyz/" target="_blank" rel="noopener noreferrer">pindd.xyz</a></p>
-		</footer>
-	</body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <header
+      class="py-4 px-auto flex flex-col md:flex-row md:justify-between items-center md:items-end relative"
+    >
+      <span id="logo" class="text-2xl font-bold flex flex-col items-center">
+        <IconCrown stroke={2.5} />
+        <p class="-mt-2">Hoteles<span class="text-primary">Ocampo</span></p>
+      </span>
+      <!-- <p class="absolute top-4 px-auto right-0 text-black/75 text-sm">+52 (833) 000 0000</p> -->
+      <nav>
+        <ul class="flex gap-8 md:gap-4">
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#ubicaciones">Ubicaciones</a></li>
+          <li><a href="#menu">Menú</a></li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+    <a
+      href="http://wa.me/5215625165078"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed right-2 md:right-8 bottom-2 md:bottom-8 bg-[#25d366] text-white p-4 rounded-full shadow-lg hover:brightness-110 duration-300"
+      ><IconBrandWhatsapp size={40} /></a
+    >
+    <footer
+      class="flex flex-col gap-8 py-8 px-auto bg-linear-to-tr from-primary to-primary-dark text-white"
+    >
+      <article>
+        <div class="flex flex-col gap-16">
+          <span
+            id="logo"
+            class="md:self-start text-2xl font-bold flex flex-col items-center text-white"
+          >
+            <IconCrown stroke={2.5} />
+            <p class="-mt-2">HotelesOcampo</p>
+          </span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h4 class="font-bold tracking-wider uppercase text-xs">Enlaces</h4>
+          <a href="">Mapa del Sitio</a>
+          <a href="">Aviso de Privacidad</a>
+          <a href="">Legalidad</a>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h4 class="font-bold tracking-wider uppercase text-xs">Contacto</h4>
+          <div class="text-sm">
+            <p>+52 000 000 0000</p>
+            <p>example@mexample.com</p>
+          </div>
+          <span class="socal"
+            ><IconBrandFacebook size={24} /><IconBrandWhatsapp
+              size={24}
+            /></span
+          >
+        </div>
+      </article>
+    </footer>
+
+    <aside
+      class="py-2 bg-black flex gap-1 text-white justify-center items-center"
+    >
+      <p class="text-[10px] font-bold tracking-wide">Powered by</p>
+
+      <a href="https://pindd.xyz/" id="logo-pindd" class="cursor-pointer hover:brightness-75 duration-300">
+        <svg
+          height="20"
+          viewBox="0 0 630 172"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M28.28 51.86C30.9467 47.7 34.6267 44.34 39.32 41.78C44.0133 39.22 49.5067 37.94 55.8 37.94C63.16 37.94 69.8267 39.8067 75.8 43.54C81.7733 47.2733 86.4667 52.6067 89.88 59.54C93.4 66.4733 95.16 74.5267 95.16 83.7C95.16 92.8733 93.4 100.98 89.88 108.02C86.4667 114.953 81.7733 120.34 75.8 124.18C69.8267 127.913 63.16 129.78 55.8 129.78C49.6133 129.78 44.12 128.5 39.32 125.94C34.6267 123.38 30.9467 120.073 28.28 116.02V171.06H0.92V39.22H28.28V51.86ZM67.32 83.7C67.32 76.8733 65.4 71.54 61.56 67.7C57.8267 63.7533 53.1867 61.78 47.64 61.78C42.2 61.78 37.56 63.7533 33.72 67.7C29.9867 71.6467 28.12 77.0333 28.12 83.86C28.12 90.6867 29.9867 96.0733 33.72 100.02C37.56 103.967 42.2 105.94 47.64 105.94C53.08 105.94 57.72 103.967 61.56 100.02C65.4 95.9667 67.32 90.5267 67.32 83.7ZM123.274 29.94C118.474 29.94 114.527 28.5533 111.434 25.78C108.447 22.9 106.954 19.38 106.954 15.22C106.954 10.9533 108.447 7.43333 111.434 4.65999C114.527 1.77999 118.474 0.339991 123.274 0.339991C127.967 0.339991 131.807 1.77999 134.794 4.65999C137.887 7.43333 139.434 10.9533 139.434 15.22C139.434 19.38 137.887 22.9 134.794 25.78C131.807 28.5533 127.967 29.94 123.274 29.94ZM136.874 39.22V128.5H109.514V39.22H136.874ZM211.101 38.26C221.555 38.26 229.875 41.6733 236.061 48.5C242.355 55.22 245.501 64.5 245.501 76.34V128.5H218.301V80.02C218.301 74.0467 216.755 69.4067 213.661 66.1C210.568 62.7933 206.408 61.14 201.181 61.14C195.955 61.14 191.795 62.7933 188.701 66.1C185.608 69.4067 184.061 74.0467 184.061 80.02V128.5H156.701V39.22H184.061V51.06C186.835 47.1133 190.568 44.02 195.261 41.78C199.955 39.4333 205.235 38.26 211.101 38.26ZM259.074 83.7C259.074 74.5267 260.78 66.4733 264.194 59.54C267.714 52.6067 272.46 47.2733 278.434 43.54C284.407 39.8067 291.074 37.94 298.434 37.94C304.3 37.94 309.634 39.1667 314.434 41.62C319.34 44.0733 323.18 47.38 325.954 51.54V10.1H353.314V128.5H325.954V115.7C323.394 119.967 319.714 123.38 314.914 125.94C310.22 128.5 304.727 129.78 298.434 129.78C291.074 129.78 284.407 127.913 278.434 124.18C272.46 120.34 267.714 114.953 264.194 108.02C260.78 100.98 259.074 92.8733 259.074 83.7ZM325.954 83.86C325.954 77.0333 324.034 71.6467 320.194 67.7C316.46 63.7533 311.874 61.78 306.434 61.78C300.994 61.78 296.354 63.7533 292.514 67.7C288.78 71.54 286.914 76.8733 286.914 83.7C286.914 90.5267 288.78 95.9667 292.514 100.02C296.354 103.967 300.994 105.94 306.434 105.94C311.874 105.94 316.46 103.967 320.194 100.02C324.034 96.0733 325.954 90.6867 325.954 83.86ZM367.668 83.7C367.668 74.5267 369.374 66.4733 372.788 59.54C376.308 52.6067 381.054 47.2733 387.028 43.54C393.001 39.8067 399.668 37.94 407.028 37.94C412.894 37.94 418.228 39.1667 423.028 41.62C427.934 44.0733 431.774 47.38 434.548 51.54V10.1H461.908V128.5H434.548V115.7C431.988 119.967 428.308 123.38 423.508 125.94C418.814 128.5 413.321 129.78 407.028 129.78C399.668 129.78 393.001 127.913 387.028 124.18C381.054 120.34 376.308 114.953 372.788 108.02C369.374 100.98 367.668 92.8733 367.668 83.7ZM434.548 83.86C434.548 77.0333 432.628 71.6467 428.788 67.7C425.054 63.7533 420.468 61.78 415.028 61.78C409.588 61.78 404.948 63.7533 401.108 67.7C397.374 71.54 395.508 76.8733 395.508 83.7C395.508 90.5267 397.374 95.9667 401.108 100.02C404.948 103.967 409.588 105.94 415.028 105.94C420.468 105.94 425.054 103.967 428.788 100.02C432.628 96.0733 434.548 90.6867 434.548 83.86Z"
+            fill="white"></path>
+          <path
+            d="M483.141 129.14C480.741 129.14 478.768 128.447 477.221 127.06C475.728 125.62 474.981 123.86 474.981 121.78C474.981 119.647 475.728 117.86 477.221 116.42C478.768 114.98 480.741 114.26 483.141 114.26C485.488 114.26 487.408 114.98 488.901 116.42C490.448 117.86 491.221 119.647 491.221 121.78C491.221 123.86 490.448 125.62 488.901 127.06C487.408 128.447 485.488 129.14 483.141 129.14ZM525.719 128.5L517.159 116.1L509.959 128.5H495.159L509.879 105.7L494.759 83.86H510.119L518.679 96.18L525.879 83.86H540.679L525.719 106.34L541.079 128.5H525.719ZM591.951 83.86L563.951 149.7H549.231L559.471 126.98L541.311 83.86H556.591L566.911 111.78L577.151 83.86H591.951ZM609.698 117.22H629.058V128.5H594.418V117.62L612.978 95.14H594.577V83.86H628.658V94.74L609.698 117.22Z"
+            fill="#8C7DFF"></path>
+        </svg>
+      </a>
+    </aside>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  @reference '@styles/global.css';
+
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer > article {
+    @apply grid gap-8 md:grid-cols-3;
+  }
+
+  footer .socal {
+    @apply flex gap-2;
+  }
+
+  footer .socal > svg {
+    @apply bg-white rounded-md p-1 text-primary stroke-[2.5] cursor-pointer;
+  }
+  /* footer div{
+		@apply fl
+	} */
 </style>
